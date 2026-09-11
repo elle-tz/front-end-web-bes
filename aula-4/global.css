@@ -1,0 +1,208 @@
+/* ===== 1. RESET ===== */
+/* zera os estilos padrão do navegador antes de qualquer outra coisa */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== 2. ESTILOS GLOBAIS ===== */
+/* cor de fundo, fonte do corpo, o que vale pra página inteira */
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: "Rajdhani", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(160deg, #000000 0%, #6e0d1e 50%, #000000 100%);
+    background-attachment: fixed;
+    color: #f2e4e4;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+h1, h2, legend {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 600;
+}
+
+/* ===== 3. HEADER ===== */
+header {
+    padding: 2.5rem 1.25rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.05rem;
+}
+
+header p {
+    color: #f2c9ce;
+    margin-top: 0.5rem;
+}
+
+/* ===== 4. CONTEÚDO ===== */
+main {
+    max-width: 40rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: rgba(42, 10, 16, 0.75);
+    backdrop-filter: blur(0.3rem);
+    border-radius: 0.9rem;
+    padding: 1.75rem;
+    border: 0.0625rem solid #4d1420;
+}
+
+section h2 {
+    margin-bottom: 1.2rem;
+    color: #f2c9ce;
+}
+
+fieldset {
+    border: 0.0625rem solid #4d1420;
+    border-radius: 0.6rem;
+    margin-bottom: 1.4rem;
+    padding: 1rem 1.1rem;
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    color: #d94157;
+}
+
+.campo {
+    margin-bottom: 0.9rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.92rem;
+    color: #e0b8bd;
+}
+
+/* checkbox e radio ficam lado a lado com o label */
+.campo-linha {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.7rem;
+}
+
+.campo-linha label {
+    margin: 0;
+    color: #f2e4e4;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem solid #4d1420;
+    background-color: #1a0508;
+    color: #f2e4e4;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+textarea {
+    min-height: 5rem;
+    resize: vertical;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.5rem;
+    border: 0.0625rem dashed #d94157;
+    background-color: #1a0508;
+    color: #e0b8bd;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+/* estiliza o botão "Escolher arquivo" gerado pelo navegador */
+input[type="file"]::file-selector-button {
+    background-color: #d94157;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.75rem;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* estrelas de avaliação: os radios ficam escondidos e o label vira a estrela */
+.estrelas {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.15rem;
+}
+
+.estrelas input {
+    display: none;
+}
+
+.estrelas label {
+    font-size: 2.1rem;
+    color: #4d1420;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.estrelas label:hover {
+    transform: scale(1.15);
+}
+
+/* pinta a estrela marcada e todas as que vêm antes dela no HTML (por isso a ordem 5,4,3,2,1) */
+.estrelas input:checked ~ label,
+.estrelas label:hover ~ label,
+.estrelas label:hover {
+    color: #d94157;
+}
+
+.botoes {
+    display: flex;
+    gap: 0.75rem;
+}
+
+button {
+    flex: 1;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+button[type="submit"] {
+    background-color: #d94157;
+    color: #ffffff;
+}
+
+button[type="reset"] {
+    background-color: #4d1420;
+    color: #e0b8bd;
+}
+
+/* ===== 5. FOOTER ===== */
+footer {
+    text-align: center;
+    color: #8a5a60;
+    font-size: 0.85rem;
+    padding: 1.5rem 0;
+}
