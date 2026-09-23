@@ -1,0 +1,58 @@
+{
+  "args": {
+
+  },
+  "data": "",
+  "files": {
+
+  },
+  "form": {
+    "apelido": "Elle",
+    "titulo": "Jogos Vorazes",
+    "tipo": "filme",
+    "ano": "2012",
+    "capa": "HungerGamesPoster.jpg",
+    "data_termino": "2026-09-22",
+    "generos": "acao",
+    "nota": "5",
+    "resenha": "Eu simplesmente amei esse filme, chorei em várias partes kkkk. A Katniss é icônica, virou uma das minhas personagens favoritas, e o Peeta é um amor, super leal e corajoso. É tenso, emocionante e te prende do início ao fim. Super recomendo!! 🏹🔥",
+    "recomenda": "sim",
+    "plataforma": "netflix"
+  },
+  "headers": {
+    "host": "postman-echo.com",
+    "sec-fetch-dest": "document",
+    "accept-encoding": "gzip, br",
+    "priority": "u=0, i",
+    "accept-language": "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
+    "content-length": "475",
+    "cache-control": "max-age=0",
+    "sec-ch-ua": "\"Google Chrome\";v=\"153\", \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"153\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "upgrade-insecure-requests": "1",
+    "content-type": "application/x-www-form-urlencoded",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/153.0.0.0 Safari/537.36",
+    "origin": "null",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+    "sec-fetch-site": "cross-site",
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-user": "?1",
+    "x-forwarded-proto": "https",
+    "cookie": "__cf_bm=pc.n3l3xOQnjgHppR_dJXH8Z8cOCyGTE9q81Ss82v4M-1790128184.1320105-1.0.1.1-0gTKChqhTIcXgaX92KRdMgOlcLy3wYL62qysXKjWBQIbGUUXwirFFR_ZEYt8TFwIWssVlPbc8N7GhvFXfBzmDF2SediWuGjY.MuLPxe5D5jg4W85F43YjmqM65tQel.J; _cfuvid=G8KY2.rzhAyf4w.eBgjKm0bFwQHCXzFtuwkzRctMyrU-1790128184.1320105-1.0.1.1-0qwr..ItJrRuzzsbayx_l_e9KNVbq29hYxRKvkKh9hU; sails.sid=s%3AIKFSqNHRjjN4hK9Qyg_Fvh76UqJr0J4Y.FTDjP2ObnqbckpE5Ixyp1k3ibMymLXXnHOPPtqU9Gyg"
+  },
+  "json": {
+    "apelido": "Elle",
+    "titulo": "Jogos Vorazes",
+    "tipo": "filme",
+    "ano": "2012",
+    "capa": "HungerGamesPoster.jpg",
+    "data_termino": "2026-09-22",
+    "generos": "acao",
+    "nota": "5",
+    "resenha": "Eu simplesmente amei esse filme, chorei em várias partes kkkk. A Katniss é icônica, virou uma das minhas personagens favoritas, e o Peeta é um amor, super leal e corajoso. É tenso, emocionante e te prende do início ao fim. Super recomendo!! 🏹🔥",
+    "recomenda": "sim",
+    "plataforma": "netflix"
+  },
+  "url": "https://postman-echo.com/post"
+}
