@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Franklin Gothic Medium", sans-serif;
+  padding: 2rem;
+  background-color: #14101f;
+  color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ff7eb6;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  opacity: 0.8;
+  font-size: 0.8rem;
+}
+
+section {
+  background-color: #231a38;
+  padding: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 800px;
+  border-radius: 0.5rem;
+}
+
+footer {
+  text-align: center;
+}
+
+/* FLEX: menu do topo */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ff7eb6;
+}
+
+/* capas dos álbuns */
+.capa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+}
+
+/* FLEX: música tocando agora */
+.tocando {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.capa-grande {
+  width: 8rem;
+  font-size: 3rem;
+}
+
+.tocando-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 12rem;
+}
+
+.tocando-info h2 {
+  margin-bottom: 0;
+}
+
+.barra {
+  height: 0.4rem;
+  background-color: #4a3b6b;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+}
+
+.progresso {
+  width: 40%;
+  height: 100%;
+  background-color: #ff7eb6;
+  border-radius: 1rem;
+}
+
+/* FLEX: botões do player */
+.controles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+button {
+  background: none;
+  border: none;
+  color: #f4f4f4;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #ff7eb6;
+}
+
+.play {
+  background-color: #ff7eb6;
+  color: #14101f;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.play:hover {
+  color: #14101f;
+  opacity: 0.85;
+}
+
+/* GRID: lista de músicas */
+.lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.musica {
+  background-color: #2f2450;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+}
+
+.musica:hover {
+  background-color: #3b2d63;
+}
+
+.musica .capa {
+  font-size: 1.5rem;
+}
+
+/* FLEX: duração e coração de cada música */
+.musica-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.curtir {
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.curtir:focus {
+  color: #ff4d6d;
+  opacity: 1;
+}
+
+/* celular */
+@media (max-width: 600px) {
+  .lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+nav a.ativo {
+  color: #ff7eb6;
+}
