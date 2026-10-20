@@ -71,6 +71,8 @@ nav a:hover {
   aspect-ratio: 1 / 1;
   border-radius: 0.5rem;
   font-size: 2rem;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* FLEX: música tocando agora */
@@ -164,6 +166,7 @@ button:hover {
 }
 
 .musica .capa {
+  width: 100%;
   font-size: 1.5rem;
 }
 
