@@ -25,10 +25,26 @@ function executar(evento) {
     }
 
     //TODO: adicionar  VALIDAção de E-MAIL UTILIZANDO UM REGEX (TRABALHINHO PRA FAZER EM CASA)
+    //const email = document.querySelector("#email");
+    //const erroEmail = document.querySelector("#erro-email");    
+    
+    // Validação de E-MAIL UTILIZANDO REGEX
     const email = document.querySelector("#email");
     const erroEmail = document.querySelector("#erro-email");
 
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (email.value === "") {
+        erroEmail.textContent = "E-mail não pode estar vazio!";
+        erroEmail.classList.add("erro");
+        erroEmail.classList.remove("oculto");
+    } else if (!regexEmail.test(email.value)) {
+        erroEmail.textContent = "E-mail inválido!";
+        erroEmail.classList.add("erro");
+        erroEmail.classList.remove("oculto");
+    }
+
+
     if (email.value === "") {
         erroEmail.textContent = "E-mail não pode estar vazio!";
         erroEmail.classList.add("erro");
