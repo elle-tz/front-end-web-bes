@@ -1,49 +1,159 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/global.css">
-  <script src="scripts/index.js" defer></script>
-  <title>Formulário JS</title>
+  <link rel="stylesheet" href="./styles/global.css">
+  <script src="./scripts/index.js" defer></script>
+  <title>Maratona - Avalie o que você assistiu</title>
 </head>
 <body>
   <header>
-    <h1>Formulário super simples</h1>
+    <h1>Maratona</h1>
+    <p>Registre e avalie o que você acabou de maratonar</p>
   </header>
+
   <main>
-    <h2>Cadastro</h2>
-    <form id="cadastro" novalidate onsubmit="executar(event)">
-      <label for="nome">Nome*</label>
-      <input type="text" id="nome">
-      <p id="erro-nome" class="oculto"></p>
+    <section>
+      <h2>Nova avaliação</h2>
 
-      <label for="idade">Idade*</label>
-      <input type="number" id="idade">
-      <p id="erro-idade" class="oculto"></p>
+      <!-- novalidate: quem valida é o nosso JavaScript, não o navegador -->
+      <form id="avaliacao" novalidate onsubmit="executar(event)">
 
-      <label for="Celular">Celular*</label>
-      <input type="text" id="celular" oninput="mascararCelular(event)">
-      <p id="erro-celular" class="oculto"></p>
+        <fieldset>
+          <legend>Seus dados</legend>
 
+          <div class="campo">
+            <label for="apelido">Seu apelido*</label>
+            <input type="text" id="apelido" placeholder="Ex: Elle">
+            <p id="erro-apelido" class="erro oculto"></p>
+          </div>
 
-      <label for="email">Email*</label>
-      <input type="email" id="email">
-      <p id="erro-email" class="oculto"></p>
+          <div class="campo">
+            <label for="email">Email*</label>
+            <input type="email" id="email" placeholder="Ex: elle@email.com">
+            <p id="erro-email" class="erro oculto"></p>
+          </div>
 
-      <label>
-        <input type="checkbox" id="termos">
-        Li e aceito os termos
-        <p id="erro-termos" class="oculto"></p>
-      </label>
+          <div class="campo">
+            <label for="celular">Celular*</label>
+            <input type="text" id="celular" placeholder="(43) 99999-9999" oninput="mascararCelular(event)">
+            <p id="erro-celular" class="erro oculto"></p>
+          </div>
+        </fieldset>
 
-      <button type="submit">Enviar</button>
-      <p id="concluido" class="oculto"></p>
+        <fieldset>
+          <legend>O que você assistiu</legend>
 
-    </form>
+          <div class="campo">
+            <label for="titulo">Título do filme ou série*</label>
+            <input type="text" id="titulo" placeholder="Ex: Jogos Vorazes">
+            <p id="erro-titulo" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <label for="tipo">Tipo*</label>
+            <select id="tipo">
+              <option value="">Selecione...</option>
+              <option value="filme">Filme</option>
+              <option value="serie">Série</option>
+            </select>
+            <p id="erro-tipo" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <label for="ano">Ano de lançamento*</label>
+            <input type="text" id="ano" maxlength="4" inputmode="numeric" placeholder="Ex: 2012" oninput="apenasNumeros(event)">
+            <p id="erro-ano" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <label for="data">Data que terminou de assistir*</label>
+            <input type="date" id="data">
+            <p id="erro-data" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <label for="plataforma">Onde você assistiu*</label>
+            <select id="plataforma">
+              <option value="">Selecione...</option>
+              <option value="netflix">Netflix</option>
+              <option value="prime">Prime Video</option>
+              <option value="hbo">HBO Max</option>
+              <option value="disney">Disney+</option>
+              <option value="outra">Outra</option>
+            </select>
+            <p id="erro-plataforma" class="erro oculto"></p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Gêneros*</legend>
+          <div class="campo-linha">
+            <input id="genero-acao" name="generos" type="checkbox" value="acao">
+            <label for="genero-acao">Ação</label>
+          </div>
+          <div class="campo-linha">
+            <input id="genero-comedia" name="generos" type="checkbox" value="comedia">
+            <label for="genero-comedia">Comédia</label>
+          </div>
+          <div class="campo-linha">
+            <input id="genero-drama" name="generos" type="checkbox" value="drama">
+            <label for="genero-drama">Drama</label>
+          </div>
+          <div class="campo-linha">
+            <input id="genero-terror" name="generos" type="checkbox" value="terror">
+            <label for="genero-terror">Terror</label>
+          </div>
+          <p id="erro-generos" class="erro oculto"></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sua avaliação</legend>
+
+          <div class="campo">
+            <span class="rotulo">Sua nota*</span>
+            <div class="estrelas">
+              <input type="radio" id="estrela5" name="nota" value="5"><label for="estrela5" title="5 estrelas">★</label>
+              <input type="radio" id="estrela4" name="nota" value="4"><label for="estrela4" title="4 estrelas">★</label>
+              <input type="radio" id="estrela3" name="nota" value="3"><label for="estrela3" title="3 estrelas">★</label>
+              <input type="radio" id="estrela2" name="nota" value="2"><label for="estrela2" title="2 estrelas">★</label>
+              <input type="radio" id="estrela1" name="nota" value="1"><label for="estrela1" title="1 estrela">★</label>
+            </div>
+            <p id="erro-nota" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <label for="resenha">Sua opinião*</label>
+            <textarea id="resenha" maxlength="500" placeholder="Sem spoilers, por favor!"></textarea>
+            <p id="erro-resenha" class="erro oculto"></p>
+          </div>
+
+          <div class="campo">
+            <span class="rotulo">Você recomenda?*</span>
+            <div class="campo-linha">
+              <input id="recomenda-sim" name="recomenda" type="radio" value="sim">
+              <label for="recomenda-sim">Recomendo</label>
+            </div>
+            <div class="campo-linha">
+              <input id="recomenda-nao" name="recomenda" type="radio" value="nao">
+              <label for="recomenda-nao">Não recomendo</label>
+            </div>
+            <p id="erro-recomenda" class="erro oculto"></p>
+          </div>
+        </fieldset>
+
+        <div class="botoes">
+          <button type="reset" onclick="limparErros()">Limpar</button>
+          <button type="submit" id="enviar">Salvar avaliação</button>
+        </div>
+
+      </form>
+    </section>
   </main>
+
   <footer>
-    <p>Projeto para conhecermos o JavaScript</p>
+    <p>Projeto para conhecermos eventos e chamadas a APIs com JavaScript</p>
   </footer>
 </body>
 </html>
